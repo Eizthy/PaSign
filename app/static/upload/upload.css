@@ -1,0 +1,548 @@
+a,
+body,
+details,
+div,
+footer,
+h1,
+html,
+label,
+p,
+section,
+span,
+summary,
+table,
+tbody,
+td,
+tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+details,
+footer,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a,
+body,
+details,
+div,
+footer,
+h1,
+html,
+label,
+p,
+section,
+span,
+summary,
+table,
+tbody,
+td,
+tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: initial;
+}
+details,
+footer,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.nice-form-group {
+  --nf-input-size: 1rem;
+  --nf-input-font-size: calc(var(--nf-input-size) * 0.875);
+  --nf-small-font-size: calc(var(--nf-input-size) * 0.875);
+  --nf-input-font-family: inherit;
+  --nf-label-font-family: inherit;
+  --nf-input-color: #20242f;
+  --nf-input-border-radius: 0.25rem;
+  --nf-input-placeholder-color: #929292;
+  --nf-input-border-color: #c0c4c9;
+  --nf-input-border-width: 1px;
+  --nf-input-border-style: solid;
+  --nf-input-border-bottom-width: 2px;
+  --nf-input-focus-border-color: #d4af37;
+  --nf-input-background-color: #f9fafb;
+  --nf-invalid-input-border-color: var(--nf-input-border-color);
+  --nf-invalid-input-background-color: var(--nf-input-background-color);
+  --nf-invalid-input-color: var(--nf-input-color);
+  --nf-valid-input-border-color: var(--nf-input-border-color);
+  --nf-valid-input-background-color: var(--nf-input-background-color);
+  --nf-valid-input-color: inherit;
+  --nf-invalid-input-border-bottom-color: red;
+  --nf-valid-input-border-bottom-color: green;
+  --nf-label-font-size: var(--nf-small-font-size);
+  --nf-label-color: #374151;
+  --nf-label-font-weight: 500;
+  --nf-slider-track-background: #dfdfdf;
+  --nf-slider-track-height: 0.25rem;
+  --nf-slider-thumb-size: calc(var(--nf-slider-track-height) * 4);
+  --nf-slider-track-border-radius: var(--nf-slider-track-height);
+  --nf-slider-thumb-border-width: 2px;
+  --nf-slider-thumb-border-focus-width: 1px;
+  --nf-slider-thumb-border-color: #fff;
+  --nf-slider-thumb-background: var(--nf-input-focus-border-color);
+  display: block;
+  margin-top: calc(var(--nf-input-size) * 1.5);
+  line-height: 1;
+  white-space: nowrap;
+  --switch-orb-size: var(--nf-input-size);
+  --switch-orb-offset: calc(var(--nf-input-border-width) * 2);
+  --switch-width: calc(var(--nf-input-size) * 2.5);
+  --switch-height: calc(var(--nf-input-size) * 1.25 + var(--switch-orb-offset));
+}
+.nice-form-group > label {
+  font-weight: var(--nf-label-font-weight);
+  display: block;
+  color: var(--nf-label-color);
+  font-size: var(--nf-label-font-size);
+  font-family: var(--nf-label-font-family);
+  margin-bottom: calc(var(--nf-input-size) / 2);
+  white-space: normal;
+}
+.nice-form-group > input[type="email"],
+.nice-form-group > input[type="id"],
+.nice-form-group > input[type="text"],
+.nice-form-group > select {
+  background: var(--nf-input-background-color);
+  font-family: inherit;
+  font-size: var(--nf-input-font-size);
+  border-bottom-width: var(--nf-input-border-width);
+  font-family: var(--nf-input-font-family);
+  box-shadow: none;
+  border-radius: var(--nf-input-border-radius);
+  border: var(--nf-input-border-width) var(--nf-input-border-style)
+    var(--nf-input-border-color);
+  border-bottom: var(--nf-input-border-bottom-width)
+    var(--nf-input-border-style) var(--nf-input-border-color);
+  color: var(--nf-input-color);
+  width: 100%;
+  padding: calc(var(--nf-input-size) * 0.75);
+  height: calc(var(--nf-input-size) * 2.75);
+  line-height: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  transition: all 0.15s ease-out;
+  --icon-padding: calc(var(--nf-input-size) * 2.25);
+  --icon-background-offset: calc(var(--nf-input-size) * 0.75);
+}
+.nice-form-group
+  > input[type="email"]:required:not(:-moz-placeholder-shown):invalid,
+.nice-form-group
+  > input[type="id"]:required:not(:-moz-placeholder-shown):invalid,
+.nice-form-group
+  > input[type="text"]:required:not(:-moz-placeholder-shown):invalid,
+.nice-form-group 
+  > select:required:not(:-moz-placeholder-shown):invalid,
+
+.nice-form-group > textarea:required:not(:-moz-placeholder-shown):invalid {
+  background-color: var(--nf-invalid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color)
+    var(--nf-valid-input-border-color)
+    var(--nf-invalid-input-border-bottom-color);
+  color: var(--nf-invalid-input-color);
+}
+
+.nice-form-group
+  > input[type="email"]:required:not(:-ms-input-placeholder):invalid,
+.nice-form-group
+  > input[type="id"]:required:not(:-ms-input-placeholder):invalid,
+.nice-form-group
+  > input[type="text"]:required:not(:-ms-input-placeholder):invalid,
+
+.nice-form-group > select:required:not(:-ms-input-placeholder):invalid,
+.nice-form-group > textarea:required:not(:-ms-input-placeholder):invalid {
+  background-color: var(--nf-invalid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color)
+    var(--nf-valid-input-border-color)
+    var(--nf-invalid-input-border-bottom-color);
+  color: var(--nf-invalid-input-color);
+}
+
+.nice-form-group
+  > input[type="email"]:required:not(:-moz-placeholder-shown):invalid:focus,
+.nice-form-group
+  > input[type="id"]:required:not(:-moz-placeholder-shown):invalid:focus,
+.nice-form-group
+  > input[type="text"]:required:not(:-moz-placeholder-shown):invalid:focus,
+
+.nice-form-group > select:required:not(:-moz-placeholder-shown):invalid:focus,
+.nice-form-group
+  > textarea:required:not(:-moz-placeholder-shown):invalid:focus {
+  background-color: var(--nf-input-background-color);
+  border-color: var(--nf-input-border-color);
+  color: var(--nf-input-color);
+}
+
+.nice-form-group
+  > input[type="email"]:required:not(:-ms-input-placeholder):invalid:focus,
+.nice-form-group
+  > input[type="id"]:required:not(:-ms-input-placeholder):invalid:focus,
+.nice-form-group
+  > input[type="text"]:required:not(:-ms-input-placeholder):invalid:focus,
+
+.nice-form-group > select:required:not(:-ms-input-placeholder):invalid:focus,
+.nice-form-group > textarea:required:not(:-ms-input-placeholder):invalid:focus {
+  background-color: var(--nf-input-background-color);
+  border-color: var(--nf-input-border-color);
+  color: var(--nf-input-color);
+}
+
+.nice-form-group
+  > input[type="email"]:required:not(:-moz-placeholder-shown):valid,
+.nice-form-group
+  > input[type="id"]:required:not(:-moz-placeholder-shown):valid,
+.nice-form-group
+  > input[type="text"]:required:not(:-moz-placeholder-shown):valid,
+
+.nice-form-group > select:required:not(:-moz-placeholder-shown):valid,
+.nice-form-group > textarea:required:not(:-moz-placeholder-shown):valid {
+  background-color: var(--nf-valid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color)
+    var(--nf-valid-input-border-color) var(--nf-valid-input-border-bottom-color);
+  color: var(--nf-valid-input-color);
+}
+
+.nice-form-group
+  > input[type="email"]:required:not(:-ms-input-placeholder):valid,
+.nice-form-group 
+  > input[type="id"]:required:not(:-ms-input-placeholder):valid,
+.nice-form-group
+  > input[type="text"]:required:not(:-ms-input-placeholder):valid,
+
+.nice-form-group > select:required:not(:-ms-input-placeholder):valid,
+.nice-form-group > textarea:required:not(:-ms-input-placeholder):valid {
+  background-color: var(--nf-valid-input-background-color);
+  border-bottom-color: var(--nf-valid-input-border-color);
+  border-color: var(--nf-valid-input-border-color)
+    var(--nf-valid-input-border-color) var(--nf-valid-input-border-bottom-color);
+  color: var(--nf-valid-input-color);
+}
+.nice-form-group > input[type="email"]:disabled,
+.nice-form-group > input[type="id"]:disabled,
+.nice-form-group > input[type="text"]:disabled,
+.nice-form-group > select:disabled {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+.nice-form-group > input[type="email"]::-webkit-input-placeholder,
+.nice-form-group > input[type="id"]::-webkit-input-placeholder,
+.nice-form-group > input[type="text"]::-webkit-input-placeholder,
+.nice-form-group > select::-webkit-input-placeholder {
+  color: var(--nf-input-placeholder-color);
+  letter-spacing: 0;
+}
+.nice-form-group > input[type="email"]:-ms-input-placeholder,
+.nice-form-group > input[type="id"]:-ms-input-placeholder,
+.nice-form-group > input[type="text"]:-ms-input-placeholder,
+.nice-form-group > select:-ms-input-placeholder {
+  color: var(--nf-input-placeholder-color);
+  letter-spacing: 0;
+}
+.nice-form-group > input[type="email"]:-moz-placeholder,
+.nice-form-group > input[type="email"]::-moz-placeholder,
+.nice-form-group > input[type="id"]:-moz-placeholder,
+.nice-form-group > input[type="id"]::-moz-placeholder,
+.nice-form-group > input[type="text"]:-moz-placeholder,
+.nice-form-group > input[type="text"]::-moz-placeholder,
+.nice-form-group > select:-moz-placeholder,
+.nice-form-group > select::-moz-placeholder {
+  color: var(--nf-input-placeholder-color);
+  letter-spacing: 0;
+}
+.nice-form-group > input[type="email"]:focus,
+.nice-form-group > input[type="id"]:focus,
+.nice-form-group > input[type="text"]:focus,
+.nice-form-group > select:focus {
+  outline: 0;
+  border-color: var(--nf-input-focus-border-color);
+}
+
+
+.nice-form-group > input[type="email"] + small,
+.nice-form-group > input[type="id"] + small,
+.nice-form-group > input[type="text"] + small,
+.nice-form-group > select + small,
+.nice-form-group > textarea + small {
+  margin-top: 0.5rem;
+}
+
+
+.nice-form-group > input[type="email"].icon-left,
+.nice-form-group > input[type="id"].icon-left,
+.nice-form-group > input[type="text"].icon-left,
+.nice-form-group > select.icon-left,
+.nice-form-group > textarea.icon-left {
+  background-position: left var(--icon-background-offset) bottom 50%;
+  padding-left: var(--icon-padding);
+  background-size: var(--nf-input-size);
+}
+
+
+.nice-form-group > input[type="email"].icon-right,
+.nice-form-group > input[type="id"].icon-right,
+.nice-form-group > input[type="text"].icon-right,
+.nice-form-group > select.icon-right,
+.nice-form-group > textarea.icon-right {
+  background-position: right var(--icon-background-offset) bottom 50%;
+  padding-right: var(--icon-padding);
+  background-size: var(--nf-input-size);
+}
+
+
+
+.nice-form-group > input[type="email"]:-webkit-autofill,
+.nice-form-group > input[type="id"]:-webkit-autofill,
+.nice-form-group > input[type="text"]:-webkit-autofill {
+  padding: calc(var(--nf-input-size) * 0.75) !important;
+}
+
+.nice-form-group > input[type="file"] {
+  background: rgba(0, 0, 0, 0.025);
+  padding: var(--nf-input-size);
+  display: block;
+  width: 100%;
+  border-radius: var(--nf-input-border-radius);
+  border: 1px dashed var(--nf-input-border-color);
+  outline: 0;
+  cursor: pointer;
+}
+.nice-form-group > input[type="file"]:focus,
+.nice-form-group > input[type="file"]:hover {
+  border-color: var(--nf-input-focus-border-color);
+}
+.nice-form-group > input[type="file"]::file-selector-button {
+  background: var(--nf-input-focus-border-color);
+  border: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0.5rem;
+  border-radius: var(--nf-input-border-radius);
+  color: #fff;
+  margin-right: 1rem;
+  outline: 0;
+  font-family: var(--nf-input-font-family);
+  cursor: pointer;
+}
+.nice-form-group > input[type="file"]::-webkit-file-upload-button {
+  background: var(--nf-input-focus-border-color);
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.5rem;
+  border-radius: var(--nf-input-border-radius);
+  color: #20242f;
+  margin-right: 1rem;
+  outline: 0;
+  font-family: var(--nf-input-font-family);
+  cursor: pointer;
+}
+
+.nice-form-group > select {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-position: right calc(var(--nf-input-size) * 0.75) bottom 50%;
+  background-repeat: no-repeat;
+  background-size: var(--nf-input-size);
+}
+
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+body {
+  background: #f8f9fd;
+  font-family: Roboto, sans-serif;
+  color: #4b5563;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.demo-page-content {
+  padding: 2em 1em;
+  max-width: 60%;
+  margin: auto;
+}
+footer {
+  text-align: center;
+  margin: 2.5em 0;
+}
+.href-target {
+  position: absolute;
+  top: -2em;
+}
+section {
+  background: #fff;
+  padding: 2em;
+  border-radius: 0.75rem;
+  line-height: 1.6;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  position: relative;
+  font-size: 0.875rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+section h1 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: #000;
+  margin-bottom: 0.75rem;
+}
+section h1 svg {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -10%;
+  margin-right: 0.25em;
+}
+section p {
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* ///// */
+.container1 {
+  display: flex;
+  justify-content: flex-end;
+  /* margin-right: 1.5em; */
+  padding-top: 20px;
+}
+
+.button1 {
+  background-color: #ffffff00;
+  color: #2b134b;
+  width: 8.5em;
+  height: 2.9em;
+  border: #d4af37 0.2em solid;
+  border-radius: 11px;
+  text-align: left;
+  transition: all 0.6s ease;
+}
+
+.button1:hover {
+  background-color: #d4af37;
+  cursor: pointer;
+}
+
+.button1 svg {
+  width: 1.6em;
+  margin-left: 60px;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between; /* This will push the text and SVG to opposite ends */
+  align-items: center; /* Vertically align content */
+}
+
+.button1:hover svg {
+  transform: translateX(-5px);
+}
+
+.text1 {
+  margin: 0 1.5em
+}
+/* ///// */
+
+
+.container {
+  display: flex;
+  justify-content: flex-end; /* Align the button to the right */
+}
+
+.button {
+  background-color: #ffffff00;
+  color: #2b134b;
+  width: 8.5em;
+  height: 2.9em;
+  border: #d4af37 0.2em solid;
+  border-radius: 11px;
+  text-align: right;
+  transition: all 0.6s ease;
+}
+
+.button:hover {
+  background-color: #d4af37;
+  cursor: pointer;
+}
+
+.button svg {
+  width: 1.6em;
+  margin: -0.2em 0.8em 1em;
+  position: absolute;
+  display: flex;
+  transition: all 0.6s ease;
+}
+
+.button:hover svg {
+  transform: translateX(5px);
+}
+
+.text {
+  margin: 0 1.5em
+}
+
+/* //////////// */
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 80px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.name-container {
+  display: flex;
+  gap: 10px;
+}
+
+.name-container .nice-form-group {
+  flex: 1;
+}

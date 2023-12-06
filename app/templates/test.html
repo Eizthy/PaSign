@@ -1,0 +1,141 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'test/test.css' %}">
+    <title>Test Data</title>
+</head>
+<body>
+
+<main class="demo-page-content">
+    <section>
+        <div class="row">
+            <div class="column">
+                <div class="href-target" id="input-types"></div>
+                <h1>
+                    TEST SIGNATURE
+                </h1>
+                <p>Input Data & Signatures to Test</p>
+            </div>
+
+            <a href="{% url 'dashboard_page' %}" style="text-decoration:none">
+                <div class="container1">
+                    <button class="button1">
+                        <div class="flex-container">
+                            <div class="text1">
+                                Back
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-arrow-back-up"
+                                 width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+            </a>
+        </div>
+
+        
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                    
+                <div class="container">
+
+                    <!-- INFO CONTAINER -->
+
+                    <div class="info-container">
+
+                        <div class="nice-form-group spacing">
+                            <label>Enter ID Number</label>
+                            <input name="student_id" type="text" id="studentIdInput" placeholder="0000-0-0000" value="{% if student_id %}{{ student_id }}{% endif %}" required /> 
+                    
+                                {% comment %} <input type="text" id="studentIdInput" placeholder="0000-0-0000" value="" /> {% endcomment %}
+                        </div> 
+                            
+                        <div class="nice-form-group spacing">
+                            <label>Name</label>
+                            <input type="text" id="nameInput" placeholder="" value="{{ student_name }}" disabled />
+                        </div>
+                        <div class="nice-form-group spacing">
+                            <label>Corporate Email</label>
+                            <input type="text" id="emailInput" placeholder="" value="{{ email }}" disabled />
+                        </div>
+                        
+                        {% comment %} IMAGE PREVIEW USER {% endcomment %}
+                            
+                        <label><b>Image Preview</b></label>
+                        <div class="hori">
+                            <form runat="server">
+                                <div class="image-preview1">
+                                    <img id="blah1" src="{{ signature_1 }}" alt="" />
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+                        <!-- PREVIEW IMAGE -->
+
+                    <div class="test-container">
+
+                        <div class="info-container">
+                            <div class="nice-form-group">
+                                    
+                                <div class="image-preview">
+                                    <img id="blah4" src="#" alt="Your Signature Preview" />
+                                </div>
+
+                                <label for="imgInp4" class="custom-file-upload">
+                                    Choose Image
+                                    <!-- retain img data in context -->
+                                    <input name="img_file" accept="image/*" type='file' id="imgInp4" style="display: none;" required/>
+                                </label> 
+
+                                                        
+                                <div class="button-container">
+                                    <input name="verify_signature" type="submit" class="btn" value="TEST" id="testBtn" />
+                                </div> 
+
+                                {% comment %} RESULT TEST {% endcomment %}
+
+                                <div class="result-container">
+                                    <table class="result-table">
+                                        <tr>
+                                            <td class="result-tab">
+                                                <h3>Result: {{ result_1 }}</h3>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+        </form>
+
+    </section>
+
+<script src="{% static 'test/test.js' %}"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var imgValue = "{{ img }}"; // Assuming 'img' is the key in your context
+        var imgPreview = document.getElementById('blah4');
+
+        if (imgValue) {
+            imgPreview.src = 'data:image;base64,' + imgValue;
+        }
+    });
+</script>
+
+</main>
+
+</body>
+</html>

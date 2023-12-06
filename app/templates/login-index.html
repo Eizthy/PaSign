@@ -1,0 +1,88 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
+
+</head>
+<body>
+
+<section class="ftco-section">
+    <div class="top-gradient"></div>
+    <div class="bottom-gradient"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+                    <div class="form-group text-center">
+                        <a href="{% url 'landing_page' %}" class="btn btn-secondary">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                    </div>                    
+                    <!-- app/templates/app/landing/index.html -->
+                    <div class="img background-image"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4" style="text-align: center;">PASIGN</h3>
+                            </div>
+                        </div>
+                        <!-- LOGIN PART -->
+                        <form action="{% url 'login_page' %}" method="post" class="signin-form">
+                            {% csrf_token %}
+                            {% if error_message %}
+                                <div class="alert alert-danger" role="alert" style="font-size: 14px;">
+                                    {{ error_message }}
+                                </div>
+                            {% endif %}
+                            <div class="form-group mb-3">
+                                <label class="label" for="name">Username</label>
+                                <input type="text" name="username" class="form-control" placeholder="Username" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label class="label" for="password">Password</label>
+                                <input type="password" name="password" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3" id="loginButton">Login</button>
+                            </div>
+                            
+                            <div class="form-group d-md-flex">
+                                <div class="w-50 text-left">
+                                    <label class="checkbox-wrap checkbox-primary mb-0">Remember Me
+                                        <input type="checkbox" name="remember_me" {% if request.COOKIES.remember_me %}checked{% endif %}>
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </div>
+                                {% comment %} <div class="w-50 text-md-right">
+                                    <a href="{% url 'forgotpassword' %}">Forgot Password?</a>
+                                </div> {% endcomment %}
+                            </div>
+                        </form>
+      
+                        <div class="form-group text-center">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'login/js/jquery.min.js' %}"></script>
+<script src="{% static 'login/js/popper.js' %}"></script>
+<script src="{% static 'login/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'login/js/login.js' %}"></script>
+
+
+</body>
+</html>

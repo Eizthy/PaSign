@@ -1,0 +1,249 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+    
+    <head>
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signature Authenticity</title>
+        <!-- Load Roboto font -->
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <!-- Load css styles -->
+<!-- project/templates/landing/index.html -->
+
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/bootstrap.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/bootstrap-responsive.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/style.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/pluton.css' %}" />
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="{% static 'app/css/pluton-ie7.css' %}" />
+        <![endif]-->
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/jquery.cslider.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/jquery.bxslider.css' %}" />
+        <link rel="stylesheet" type="text/css" href="{% static 'landingpage/css/animate.css' %}" />
+
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+        <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+        <link rel="shortcut icon" href="images/ico/favicon.ico">
+    </head>
+    
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Navigation button, visible on small resolution -->
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <i class="icon-menu"></i>
+                    </button>
+                    <!-- Main navigation -->
+                    <div class="nav-collapse collapse pull-right">
+                        <ul class="nav" id="top-navigation">
+                            <li class="active"><a href="#home">Home</a></li>
+                            <li><a href="#service">Do's</a></li>
+                            <li><a href="#about">About</a></li>
+                        </ul>
+                    </div>
+                    <!-- End main navigation -->
+                </div>
+            </div>
+        </div>
+        <!-- Start home section -->
+        <div id="home">
+            <!-- Start cSlider -->
+            <div id="da-slider" class="da-slider">
+                <div class="triangle"></div>
+                <!-- mask elemet use for masking background image -->
+                <div class="mask"></div>
+                <!-- All slides centred in container element -->
+                <div class="container">
+                    <!-- Start first slide -->
+                    <div class="da-slide">
+                        <h2 class="fittext2">Welcome to Pasign</h2>
+                        <h4>PROVING HANDWRITTEN <br> SIGNATURE USING SIAMESE NEURAL NETWORK</h4>
+                        <p>Ensure the validity of handwritten signatures through cutting-edge Siamese neural network technology, providing advanced verification and authentication of handcrafted signatures with unparalleled precision and security.</p>
+                        <a href="{% url 'login_page' %}" class="da-link button">LOGIN</a>
+                        <div class="da-img">
+                            <img src="{% static 'landingpage/images/penwrite.png' %}" alt="image01" width="350">
+                        </div>
+                    </div>
+                    <!-- End first slide -->
+                    <!-- Start second slide -->
+                    <div class="da-slide">
+                        <h2>GENUINE SIGNATURE</h2>
+                        <h4>AUTHENTICITY SPEAKS VOLUMES IN <br> EVERY GENUINE SIGNATURE</h4>
+                        <p>A Genuine Signature is a unique and unmistakable expression of one's true self. It transcends mere ink on paper, embodying the essence and integrity of an individual's thoughts, beliefs, and intentions.</p>
+                        <a href="{% url 'login_page' %}" class="da-link button">LOGIN</a>
+                        <div class="da-img">
+                            <img src="{% static 'landingpage/images/pen.png' %}" width="320" alt="image02">
+                        </div>
+                    </div>
+                    <!-- End second slide -->
+                    <!-- Start third slide -->
+                    <div class="da-slide">
+                        <h2>FORGED SIGNATURE</h2>
+                        <h4>A FRAUDULENT REPLICATION OF A <br> PERSON'S MARK, UNDERMINING TRUST</h4>
+                        <p>This act involves skilled imitation, aiming to deceive and manipulate documents, contracts, or agreements. It undermines the integrity of signatures, eroding the foundation of trust that such marks are meant to symbolize. </p>
+                        <a href="{% url 'login_page' %}" class="da-link button">LOGIN</a>
+                        <div class="da-img">
+                            <img src="{% static 'landingpage/images/paper.png' %}" width="320" alt="image03">
+                        </div>
+                    </div>
+                    <!-- Start third slide -->
+                    <!-- Start cSlide navigation arrows -->
+                    <div class="da-arrows">
+                        <span class="da-arrows-prev"></span>
+                        <span class="da-arrows-next"></span>
+                    </div>
+                    <!-- End cSlide navigation arrows -->
+                </div>
+            </div>
+        </div>
+        <!-- End home section -->
+
+        <!-- Service section start -->
+        <div class="section primary-section" id="service">
+            <div class="container">
+                <!-- Start title section -->
+                <div class="title">
+                    <h1>What We Do?</h1>
+                    <!-- Section's title goes here -->
+                    <p>We leverage state-of-the-art Siamese Neural Network technology to achieve impressive signature accuracy rates.</p>
+                    <!--Simple description for section goes here. -->
+                </div>
+                <div class="row-fluid">
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="{% static 'landingpage/images/uploadbg.jpg' %}" alt="service 1" style="border: 3px solid #FECE1A;">
+                            </div>
+                            <h3>UPLOAD DATA</h3>
+                            <p>This initial step involves inputting the relevant signature data into the system. This can include scanned images or digital files of signatures to be verified.</p>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="{% static 'landingpage/images/testbg.jpg' %}" alt="service 2" style="border: 3px solid #FECE1A;">
+                            </div>
+                            <h3>TEST</h3>
+                            <p>Once the data is uploaded, the system initiates the verification process. It employs advanced algorithms to analyze the provided signature against reference samples.</p>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div class="centered service">
+                            <div class="circle-border zoom-in">
+                                <img class="img-circle" src="{% static 'landingpage/images/resultbg.jpg' %}" alt="service 3" style="border: 3px solid #FECE1A;">
+                            </div>
+                            <h3>GET RESULT</h3>
+                            <p>This step delivers a percentage-based evaluation, indicating the degree of similarity between the provided signature and the reference data, ensuring a concise outcome.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service section end -->
+
+        <div class="section secondary-section">
+            <div class="triangle"></div>
+            <div class="container centered">
+                <p class="large-text">Your handwritten signature is a personal imprint, a unique expression of your identity and intention, capturing a moment in time with a stroke of the pen</p>
+            </div>
+        </div>
+        
+        <!-- About us section start -->
+        <div class="section primary-section" id="about">
+            <div class="triangle"></div>
+            <div class="container">
+                <div class="title">
+                    <h1>Who We Are?</h1>
+                    <p>COMPUTER SCIENCE STUDENT RESEARCHERS</p>
+                </div>
+                <div class="row-fluid team">
+                    <div class="span3" id="first-person">
+                        <div class="thumbnail">
+                            <img src="{% static 'landingpage/images/Myk.JPG' %}" alt="team 1">
+                            <h3>Abad, Mykel Zandrex P.</h3>
+                            
+                            <div class="mask">
+                                <h2>BSCS 4B-1</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3" id="second-person">
+                        <div class="thumbnail">
+                            <img src="{% static 'landingpage/images/Carl.JPG' %}" alt="team 2">
+                            <h3>Alabastro, Carl Vincent</h3>
+                            
+                            <div class="mask">
+                                <h2>BSCS 4B-1</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3" id="third-person">
+                        <div class="thumbnail">
+                            <img src="{% static 'landingpage/images/Dans.JPG' %}" alt="team 3">
+                            <h3>Danay, Leizel Ann M.</h3>
+                            
+                            <div class="mask">
+                                <h2>BSCS 4B-1</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span3" id="fourth-person">
+                        <div class="thumbnail">
+                            <img src="{% static 'landingpage/images/Ralph.JPG' %}" alt="team 4">
+                            <h3>De Paz, John Ralph A.</h3>
+                            
+                            <div class="mask">
+                                <h2>BSCS 4B-1</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text centered">
+                    {% comment %} <h3>About Us</h3> {% endcomment %}
+                    <p>-------------------------------------------------------------------
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- About us section end -->  
+
+       
+        
+        <!-- Footer section start -->
+        <div class="footer">
+
+        </div>
+        <!-- Footer section end -->
+        <!-- ScrollUp button start -->
+        <div class="scrollup">
+            <a href="#">
+                <i class="icon-up-open"></i>
+            </a>
+        </div>
+        <!-- ScrollUp button end -->
+        <!-- Include javascript -->
+        <script src="{% static 'landingpage/js/jquery.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/jquery.mixitup.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/modernizr.custom.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/jquery.bxslider.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/jquery.cslider.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/jquery.placeholder.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/jquery.inview.js' %}"></script>
+        <script type="text/javascript" src="{% static 'landingpage/js/app.js' %}"></script>
+
+        <!-- Load google maps api and call initializeMap function defined in app.js -->
+        <script async="" defer="" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap"></script>
+        <!-- css3-mediaqueries.js for IE8 or older -->
+        <!--[if lt IE 9]>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+    </body>
+</html>

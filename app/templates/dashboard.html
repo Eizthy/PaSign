@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
+
+    <title>Dashboard</title>
+    
+    <!DOCTYPE html>
+
+</head>
+<body>
+        
+    <div class="navigation">
+        <a class="button" href="{% url 'landing_page' %}">
+            <img src="{% static 'dashboard/logout.png' %}">
+            <div class="logout">LOGOUT</div>
+        </a>
+    </div>
+
+    <div class="container">
+        <button type="button" class="btn cube cube-hover" id="uploadButton">
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="text">UPLOAD DATA</div>
+        </button>
+
+        <button type="button" class="btn cube cube-hover" id="testButton">
+            <div class="bg-top">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg-right">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="bg">
+                <div class="bg-inner"></div>
+            </div>
+            <div class="text">TEST DATA</div>
+        </button>
+    </div>
+
+
+
+    <script>
+        document.getElementById("uploadButton").addEventListener("click", function () {
+            window.location.href = "{% url 'upload_data' %}";
+        });
+
+        document.getElementById("testButton").addEventListener("click", function () {
+            window.location.href = "{% url 'test_data' %}";
+        });
+    </script>
+
+
+<script src="{% static 'dashboard/dashboard.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forgot Password</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{% static 'forgotpass/css/forgotpass.css' %}">
+
+</head>
+<body>
+
+<section class="ftco-section">
+    <div class="top-gradient"></div>
+  <div class="bottom-gradient"></div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 col-lg-10">
+                <div class="wrap d-md-flex">
+                    <div class="form-group text-center">
+                        <a href="{% url 'login_page' %}" class="btn btn-secondary">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                    </div>                    
+                    <div class="img" style="background-image: url(images/log.gif);"></div>
+                    <div class="login-wrap p-4 p-md-5">
+                        <div class="d-flex">
+                            <div class="w-100">
+                                <h3 class="mb-4" style="text-align: center;">PASIGN</h3>
+                            </div>
+                        </div>
+                        <form action="#" class="signin-form">
+                            <div class="form-group text-center mb-3">
+                                <p>No problem, we’ll email you instructions to reset your password.</p>
+                            </div>
+                            <div class="form-group mb-3 text-center">
+                                <label class="label" for="email"></label>
+                                <input type="email" class="form-control" placeholder="Enter your Corporate Email" required>
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="form-control btn btn-primary rounded submit px-3">Reset Password</button>
+                            </div>
+                        </form>
+                        <div class="form-group text-center">
+                            <a href="{% url 'login_page' %}" class="btn btn-link btn-no-hover">
+                                <span style="font-size: 24px; cursor: pointer;">&larr;</span> Back to Login
+                            </a>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
