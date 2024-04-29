@@ -9,6 +9,7 @@
     <title>Test Data</title>
 </head>
 <body>
+
 <main class="demo-page-content">
     <section>
         <div class="row">
@@ -107,107 +108,113 @@
                                     <!-- retain img data in context -->
                                     <input name="img_file" accept="image/*" type='file' id="imgInp4" style="display: none;" required/>
                                 </label> 
-
                                                         
                                 <div class="button-container">
                                     <input name="verify_signature" type="submit" class="btn" value="TEST" id="testBtn" />
                                 </div> 
 
+                                {% comment %} <div class="result-time">
+                                    <h1>{{ test_complete }}</h1>
+                                    <h1>{{ time_complete }}</h1>
+                                </div> {% endcomment %}
+                                
+
                                 {% comment %} RESULT TEST {% endcomment %}
 
                                 <div class="result-container">
                                     <table class="result-table">
-                                        <!-- <tr>
+                                        {% comment %} <tr>
                                             <td class="result-tab {{ color_class_1 }}">
-                                                <h3>Result 1: {{ result_1 }}</h3>
+                                                <h3>Result 1: {{ result_1 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_2 }}">
-                                                <h3>Result 2: {{ result_2 }}</h3>
+                                                <h3>Result 2: {{ result_2 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_3 }}">
-                                                <h3>Result 3: {{ result_3 }}</h3>
+                                                <h3>Result 3: {{ result_3 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_4 }}">
-                                                <h3>Result 4: {{ result_4 }}</h3>
+                                                <h3>Result 4: {{ result_4 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_5 }}">
-                                                <h3>Result 5: {{ result_5 }}</h3>
+                                                <h3>Result 5: {{ result_5 }} </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="result-tab {{ color_class_6 }}">
-                                                <h3>Result 6: {{ result_6 }}</h3>
+                                                <h3>Result 6: {{ result_6 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_7 }}">
-                                                <h3>Result 7: {{ result_7 }}</h3>
+                                                <h3>Result 7: {{ result_7 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_8 }}">
-                                                <h3>Result 8: {{ result_8 }}</h3>
+                                                <h3>Result 8: {{ result_8 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_9 }}">
-                                                <h3>Result 9: {{ result_9 }}</h3>
+                                                <h3>Result 9: {{ result_9 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_10 }}">
-                                                <h3>Result 10: {{ result_10 }}</h3>
+                                                <h3>Result 10: {{ result_10 }} </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="result-tab {{ color_class_11 }}">
-                                                <h3>Result 11: {{ result_11 }}</h3>
+                                                <h3>Result 11: {{ result_11 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_12 }}">
-                                                <h3>Result 12: {{ result_12 }}</h3>
+                                                <h3>Result 12: {{ result_12 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_13 }}">
-                                                <h3>Result 13: {{ result_13 }}</h3>
+                                                <h3>Result 13: {{ result_13 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_14 }}">
-                                                <h3>Result 14: {{ result_14 }}</h3>
+                                                <h3>Result 14: {{ result_14 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_15 }}">
-                                                <h3>Result 15: {{ result_15 }}</h3>
+                                                <h3>Result 15: {{ result_15 }} </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="result-tab {{ color_class_16 }}">
-                                                <h3>Result 16: {{ result_16 }}</h3>
+                                                <h3>Result 16: {{ result_16 }} </h3>
                                             </td>
-                                            <td class="result-tab {{ color_class_17 }}">
-                                                <h3>Result 17: {{ result_17 }}</h3>
+                                            <td class="result-tab {{ color_class_7 }}">
+                                                <h3>Result 17: {{ result_17 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_18 }}">
-                                                <h3>Result 18: {{ result_18 }}</h3>
+                                                <h3>Result 18: {{ result_18 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_19 }}">
-                                                <h3>Result 19: {{ result_19 }}</h3>
+                                                <h3>Result 19: {{ result_19 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_20 }}">
-                                                <h3>Result 20: {{ result_20 }}</h3>
+                                                <h3>Result 20: {{ result_20 }} </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="result-tab {{ color_class_21 }}">
-                                                <h3>Result 21: {{ result_21 }}</h3>
+                                                <h3>Result 21: {{ result_21 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_22 }}">
-                                                <h3>Result 22: {{ result_22 }}</h3>
+                                                <h3>Result 22: {{ result_22 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_23 }}">
-                                                <h3>Result 23: {{ result_23 }}</h3>
+                                                <h3>Result 23: {{ result_23 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_24 }}">
-                                                <h3>Result 24: {{ result_24 }}</h3>
+                                                <h3>Result 24: {{ result_24 }} </h3>
                                             </td>
                                             <td class="result-tab {{ color_class_25 }}">
-                                                <h3>Result 25: {{ result_25 }}</h3>
+                                                <h3>Result 25: {{ result_25 }} </h3>
                                             </td>
-                                        </tr> -->
+                                        </tr> {% endcomment %}
+                                        
                                         <tr>
                                             <td colspan="5" class="result-tab {{ avg_class }}">
-                                                <h2> Average Result: {{ avg_result }} </h2>
-                                                <h3>{{ avg_message }}</h3>
-                                                <h3>{{time}}</h3>
-                                                
+                                                <h2 class="test_complete"> {{ test_complete }}</h2>
+                                                <h3>Average Result: {{ avg_result }} </h3>
+                                                <p>{{ avg_message }}</p>
+                                                <h1 class="time_complete">{{ time_complete }}</h1>
                                             </td>
                                         </tr>
                                     </table>
@@ -232,6 +239,8 @@
             imgPreview.src = 'data:image;base64,' + imgValue;
         }
     });
+
+
 </script>
 
 </main>

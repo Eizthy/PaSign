@@ -176,127 +176,127 @@ class TestView(View):
         result_24 = predict(img_file, user_data.signature_24)
         result_25 = predict(img_file, user_data.signature_25)
 
-        if result_1 <= 80:
+        if result_1 <= 75:
             color_class_1 = "result-low"
         else:
             color_class_1 = "result-high"
 
-        if result_2 <= 80:
+        if result_2 <= 75:
             color_class_2 = "result-low"
         else:
             color_class_2 = "result-high"
 
-        if result_3 <= 80:
+        if result_3 <= 75:
             color_class_3 = "result-low"
         else:
             color_class_3 = "result-high"
 
-        if result_4 <= 80:
+        if result_4 <= 75:
             color_class_4 = "result-low"
         else:
             color_class_4 = "result-high"
 
-        if result_5 <= 80:
+        if result_5 <= 75:
             color_class_5 = "result-low"
         else:
             color_class_5 = "result-high"
 
-        if result_6 <= 80:
+        if result_6 <= 75:
             color_class_6 = "result-low"
         else:
             color_class_6 = "result-high"
 
-        if result_7 <= 80:
+        if result_7 <= 75:
             color_class_7 = "result-low"
         else:
             color_class_7 = "result-high"
 
-        if result_8 <= 80:
+        if result_8 <= 75:
             color_class_8 = "result-low"
         else:
             color_class_8 = "result-high"
 
-        if result_9 <= 80:
+        if result_9 <= 75:
             color_class_9 = "result-low"
         else:
             color_class_9 = "result-high"
 
-        if result_10 <= 80:
+        if result_10 <= 75:
             color_class_10 = "result-low"
         else:
             color_class_10 = "result-high"
 
-        if result_11 <= 80:
+        if result_11 <= 75:
             color_class_11 = "result-low"
         else:
             color_class_11 = "result-high"
 
-        if result_12 <= 80:
+        if result_12 <= 75:
             color_class_12 = "result-low"
         else:
             color_class_12 = "result-high"
 
-        if result_13 <= 80:
+        if result_13 <= 75:
             color_class_13 = "result-low"
         else:
             color_class_13 = "result-high"
 
-        if result_14 <= 80:
+        if result_14 <= 75:
             color_class_14 = "result-low"
         else:
             color_class_14 = "result-high"
 
-        if result_15 <= 80:
+        if result_15 <= 75:
             color_class_15 = "result-low"
         else:
             color_class_15 = "result-high"
 
-        if result_16 <= 80:
+        if result_16 <= 75:
             color_class_16 = "result-low"
         else:
             color_class_16 = "result-high"
 
-        if result_17 <= 80:
+        if result_17 <= 75:
             color_class_17 = "result-low"
         else:
             color_class_17 = "result-high"
 
-        if result_18 <= 80:
+        if result_18 <= 75:
             color_class_18 = "result-low"
         else:
             color_class_18 = "result-high"
 
-        if result_19 <= 80:
+        if result_19 <= 75:
             color_class_19 = "result-low"
         else:
             color_class_19 = "result-high"
 
-        if result_20 <= 80:
+        if result_20 <= 75:
             color_class_20 = "result-low"
         else:
             color_class_20 = "result-high"
 
-        if result_21 <= 80:
+        if result_21 <= 75:
             color_class_21 = "result-low"
         else:
             color_class_21 = "result-high"
 
-        if result_22 <= 80:
+        if result_22 <= 75:
             color_class_22 = "result-low"
         else:
             color_class_22 = "result-high"
 
-        if result_23 <= 80:
+        if result_23 <= 75:
             color_class_23 = "result-low"
         else:
             color_class_23 = "result-high"
 
-        if result_24 <= 80:
+        if result_24 <= 75:
             color_class_24 = "result-low"
         else:
             color_class_24 = "result-high"
 
-        if result_25 <= 80:
+        if result_25 <= 75:
             color_class_25 = "result-low"
         else:
             color_class_25 = "result-high"
@@ -307,7 +307,7 @@ class TestView(View):
             result_16 + result_17 + result_18 + result_19 + result_20 +
             result_21 + result_22 + result_23 + result_24 + result_25) / 25
 
-        if avg <= 80:
+        if avg <= 75:
             avg_message = "The signature is considered as forged!"
             avg_class = "result-low"
         else:
