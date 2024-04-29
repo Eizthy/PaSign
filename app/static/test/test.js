@@ -67,4 +67,5 @@ if (studentId.length === 11) { // Check if the full pattern is matched
         document.getElementById(`blah${i}`).style.display = 'none'; // Hide the image preview element
     }
 }
+
 });

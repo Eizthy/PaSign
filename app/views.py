@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from .models import UserData, get_user_signature_path
 from django.contrib import messages
 from django.conf import settings
-from .model import predict
+from .training import predict
 
 # LANDING PAGE
 class LandingPageView(View):

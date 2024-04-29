@@ -644,25 +644,59 @@ section p {
   border-collapse: collapse;
 }
 
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300);
+
+.loading {
+  padding: 0;
+  margin: 0;
+  height: 50%;
+  font-family: 'Raleway';
+  overflow: hidden;
+}
+
+.load {
+  height: 50px; /* Adjust as needed */
+  width: 500px; /* Adjust as needed */
+  margin: auto;
+  position: relative;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: #af71af;
+}
+
+.done {
+  /* top: 0;
+  height: 100%;
+  width: 100%; */
+  transition: all .53s ease;
+}
+
+.count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.5em; /* Adjust as needed */
+  color:#d4af37; 
+}
+
 .result-tab {
   padding: auto;
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 700;
   color: #d4af37;
   border: 2px solid rgb(0, 0, 0);
   font-family: inherit;
   text-align: center;
   width: 140px;
-}
-
-.test_complete {
-  font-size: 25px;
-  color: #d4af37;
-}
-
-.time_complete {
-  font-size: 20px;
-  color: #d4af37;
 }
 
 .result-tab:not(:last-child) {
@@ -676,15 +710,6 @@ section p {
 .result-low {
   color: red;
 }
-
-.result-time-complete {
-  color: green;
-}
-
-.result-time-ongoing {
-  color: red;
-}
-
 
 
 /* /preview image horizontal/ */
